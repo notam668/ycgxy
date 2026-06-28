@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>盐粒子生活圈 - 盐城工学院智能专业推荐</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">
+        <span class="logo-icon">📚</span>
+        <div class="logo-text">
+          <h1>盐粒子生活圈</h1>
+          <p>盐城工学院智能专业推荐系统</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#home" class="nav-link active">首页</a>
+        <a href="#query" class="nav-link">智能推荐</a>
+        <a href="#about" class="nav-link">关于盐工</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 主页面 -->
+  <main id="home" class="hero">
+    <div class="container hero-content">
+      <div class="hero-left">
+        <div class="badge">✨ 盐城工学院 · 2026志愿填报助手</div>
+        <h2 class="hero-title">
+          输入你的<span class="highlight">高考分数</span><br />
+          智能匹配心仪专业
+        </h2>
+        <p class="hero-desc">
+          基于历年录取数据，结合今年招生计划，为你科学预测报考成功概率，
+          并按照"冲、稳、保"策略推荐最适合你的专业组合。
+        </p>
+        <div class="hero-features">
+          <div class="feature-item"><span class="feature-icon">🎯</span><span>智能概率预测</span></div>
+          <div class="feature-item"><span class="feature-icon">📊</span><span>冲稳保分类</span></div>
+          <div class="feature-item"><span class="feature-icon">📖</span><span>专业详情查询</span></div>
+        </div>
+        <a href="#query" class="btn-primary">立即开始推荐 →</a>
+      </div>
+      <div class="hero-right">
+        <div class="school-card">
+          <div class="school-banner">
+            <span class="school-badge">🏫 盐城工学院</span>
+          </div>
+          <div class="school-info">
+            <h3>盐城工学院</h3>
+            <p>江苏省属全日制普通本科高校，教育部"卓越工程师教育培养计划"试点高校，坐落于美丽的盐城。</p>
+            <div class="school-tags">
+              <span class="tag">公办本科</span>
+              <span class="tag">卓越计划</span>
+              <span class="tag">工科优势</span>
+              <span class="tag">硕士立项</span>
+            </div>
+            <div class="school-stats">
+              <div class="stat"><span class="stat-num">70+</span><span class="stat-label">本科专业</span></div>
+              <div class="stat"><span class="stat-num">22000+</span><span class="stat-label">在校学生</span></div>
+              <div class="stat"><span class="stat-num">18</span><span class="stat-label">二级学院</span></div>
+            </div>
+            <div class="score-panel">
+              <div class="score-panel-title">📊 2025年各专业组最低投档线</div>
+              <div class="score-grid">
+                <div class="score-item score-physics">
+                  <span class="score-group">物理类 03专业组</span>
+                  <span class="score-value">506分</span>
+                  <span class="score-rank">位次 154,519</span>
+                </div>
+                <div class="score-item score-chem">
+                  <span class="score-group">物理类 02专业组</span>
+                  <span class="score-value">499分</span>
+                  <span class="score-rank">位次 160,498</span>
+                </div>
+                <div class="score-item score-history">
+                  <span class="score-group">历史类 01专业组</span>
+                  <span class="score-value">533分</span>
+                  <span class="score-rank">位次 31,664</span>
+                </div>
+                <div class="score-item score-global">
+                  <span class="score-group">中外合作办学</span>
+                  <span class="score-value">483分</span>
+                  <span class="score-rank">位次 174,640</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 查询推荐区域 -->
+  <section id="query" class="query-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>🎓 智能专业推荐</h2>
+        <p>输入你的高考分数和选科情况，我们将为你生成专属推荐报告</p>
+      </div>
+
+      <div class="query-card">
+        <div class="query-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="score">高考分数 <span class="required">*</span></label>
+              <input type="number" id="score" placeholder="请输入你的高考分数 (0-750)" min="0" max="750" />
+            </div>
+            <div class="form-group">
+              <label for="subject-type">科类</label>
+              <select id="subject-type">
+                <option value="physics">物理类（首选物理）</option>
+                <option value="history">历史类（首选历史）</option>
+              </select>
+            </div>
+          </div>
+          <button id="analyze-btn" class="btn-primary btn-large">🔍 开始智能分析</button>
+        </div>
+
+        <!-- 结果显示区 -->
+        <div id="result-area" class="result-area hidden">
+          <!-- 概率总览 -->
+          <div class="overview-panel">
+            <div class="overview-item probability-overview">
+              <div class="overview-icon">📈</div>
+              <div class="overview-content">
+                <div class="overview-label">你可报考的专业总数</div>
+                <div class="overview-value"><span id="total-count">0</span><span class="unit">个</span></div>
+              </div>
+            </div>
+            <div class="overview-item chong-item">
+              <div class="overview-icon">🚀</div>
+              <div class="overview-content">
+                <div class="overview-label">冲刺专业</div>
+                <div class="overview-value"><span id="chong-count">0</span><span class="unit">个</span></div>
+                <div class="overview-sub">概率较低，挑战潜力</div>
+              </div>
+            </div>
+            <div class="overview-item wen-item">
+              <div class="overview-icon">⚖️</div>
+              <div class="overview-content">
+                <div class="overview-label">稳妥专业</div>
+                <div class="overview-value"><span id="wen-count">0</span><span class="unit">个</span></div>
+                <div class="overview-sub">概率适中，稳妥报考</div>
+              </div>
+            </div>
+            <div class="overview-item bao-item">
+              <div class="overview-icon">🛡️</div>
+              <div class="overview-content">
+                <div class="overview-label">保底专业</div>
+                <div class="overview-value"><span id="bao-count">0</span><span class="unit">个</span></div>
+                <div class="overview-sub">概率较高，安全保障</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 分数可视化 -->
+          <div class="score-visual">
+            <div class="score-bar-wrap">
+              <div class="score-bar">
+                <div class="score-bar-label">你的分数</div>
+                <div id="score-indicator" class="score-indicator"></div>
+                <div class="bar-zones">
+                  <div class="zone zone-chong"><span>冲刺区</span></div>
+                  <div class="zone zone-wen"><span>稳妥区</span></div>
+                  <div class="zone zone-bao"><span>保底层</span></div>
+                </div>
+              </div>
+              <div class="score-info">
+                <div class="score-info-row"><span>你的分数</span><strong id="user-score">--</strong></div>
+                <div class="score-info-row"><span>建议策略</span><strong id="suggestion-text">请先输入分数</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 分类标签 -->
+          <div class="category-tabs">
+            <button class="tab-btn active" data-category="all">
+              全部 <span id="tab-total" class="tab-badge">0</span>
+            </button>
+            <button class="tab-btn tab-chong" data-category="chong">
+              🚀 冲刺 <span id="tab-chong" class="tab-badge">0</span>
+            </button>
+            <button class="tab-btn tab-wen" data-category="wen">
+              ⚖️ 稳妥 <span id="tab-wen" class="tab-badge">0</span>
+            </button>
+            <button class="tab-btn tab-bao" data-category="bao">
+              🛡️ 保底 <span id="tab-bao" class="tab-badge">0</span>
+            </button>
+          </div>
+
+          <!-- 专业列表 -->
+          <div id="major-list" class="major-list"></div>
+
+          <div id="empty-tip" class="empty-tip hidden">
+            <div class="empty-icon">😢</div>
+            <p>暂时没有匹配的专业建议，建议调整分数或查看其他院校</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于盐工 -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>🏫 关于盐城工学院</h2>
+        <p>了解这所坐落于黄海之滨的工科名校</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-icon">🏛️</div>
+          <h3>学校概况</h3>
+          <p>盐城工学院是江苏省属全日制普通本科高校，实行省市共建、以省为主的管理体制，位于有"东方湿地之都，仙鹤神鹿世界"美誉的盐城市。</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🎓</div>
+          <h3>办学实力</h3>
+          <p>学校是教育部"卓越工程师教育培养计划"试点高校、国家"新工科研究与实践项目"入选高校，拥有18个二级学院，70多个本科专业。</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🔬</div>
+          <h3>学科优势</h3>
+          <p>以工科为主，多学科协调发展。机械、土木、化工、材料、电气等专业实力雄厚，多个专业入选国家一流本科专业建设点。</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🌏</div>
+          <h3>校园环境</h3>
+          <p>学校有建军中路、希望大道、迎宾大道三个校区，环境优美，教学设施完善，为学生提供优质的学习与生活环境。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">📚 盐粒子生活圈</div>
+          <p>盐城工学院智能专业推荐系统 · 仅供参考</p>
+        </div>
+        <div class="footer-right">
+          <p>⚠️ 本系统基于历年录取数据模型预测，仅供志愿填报参考。实际录取结果受当年报考人数、分数分布等多因素影响，请以官方公布为准。</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 专业详情模态框 -->
+  <div id="major-modal" class="modal hidden">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="majors.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
