@@ -18,84 +18,14 @@
         </div>
       </div>
       <nav class="nav">
-        <a href="#home" class="nav-link active">首页</a>
-        <a href="#query" class="nav-link">智能推荐</a>
+        <a href="#query" class="nav-link active">智能推荐</a>
+        <a href="#home" class="nav-link">首页</a>
         <a href="#about" class="nav-link">关于盐工</a>
       </nav>
     </div>
   </header>
 
-  <!-- 主页面 -->
-  <main id="home" class="hero">
-    <div class="container hero-content">
-      <div class="hero-left">
-        <div class="badge">✨ 盐城工学院 · 2026志愿填报助手</div>
-        <h2 class="hero-title">
-          输入你的<span class="highlight">高考分数</span><br />
-          智能匹配心仪专业
-        </h2>
-        <p class="hero-desc">
-          基于历年录取数据，结合今年招生计划，为你科学预测报考成功概率，
-          并按照"冲、稳、保"策略推荐最适合你的专业组合。
-        </p>
-        <div class="hero-features">
-          <div class="feature-item"><span class="feature-icon">🎯</span><span>智能概率预测</span></div>
-          <div class="feature-item"><span class="feature-icon">📊</span><span>冲稳保分类</span></div>
-          <div class="feature-item"><span class="feature-icon">📖</span><span>专业详情查询</span></div>
-        </div>
-        <a href="#query" class="btn-primary">立即开始推荐 →</a>
-      </div>
-      <div class="hero-right">
-        <div class="school-card">
-          <div class="school-banner">
-            <span class="school-badge">🏫 盐城工学院</span>
-          </div>
-          <div class="school-info">
-            <h3>盐城工学院</h3>
-            <p>江苏省属全日制普通本科高校，教育部"卓越工程师教育培养计划"试点高校，坐落于美丽的盐城。</p>
-            <div class="school-tags">
-              <span class="tag">公办本科</span>
-              <span class="tag">卓越计划</span>
-              <span class="tag">工科优势</span>
-              <span class="tag">硕士立项</span>
-            </div>
-            <div class="school-stats">
-              <div class="stat"><span class="stat-num">70+</span><span class="stat-label">本科专业</span></div>
-              <div class="stat"><span class="stat-num">22000+</span><span class="stat-label">在校学生</span></div>
-              <div class="stat"><span class="stat-num">18</span><span class="stat-label">二级学院</span></div>
-            </div>
-            <div class="score-panel">
-              <div class="score-panel-title">📊 2025年各专业组最低投档线</div>
-              <div class="score-grid">
-                <div class="score-item score-physics">
-                  <span class="score-group">物理类 03专业组</span>
-                  <span class="score-value">506分</span>
-                  <span class="score-rank">位次 154,519</span>
-                </div>
-                <div class="score-item score-chem">
-                  <span class="score-group">物理类 02专业组</span>
-                  <span class="score-value">499分</span>
-                  <span class="score-rank">位次 160,498</span>
-                </div>
-                <div class="score-item score-history">
-                  <span class="score-group">历史类 01专业组</span>
-                  <span class="score-value">533分</span>
-                  <span class="score-rank">位次 31,664</span>
-                </div>
-                <div class="score-item score-global">
-                  <span class="score-group">中外合作办学</span>
-                  <span class="score-value">483分</span>
-                  <span class="score-rank">位次 174,640</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <!-- 查询推荐区域 -->
+  <!-- 智能专业推荐 -->
   <section id="query" class="query-section">
     <div class="container">
       <div class="section-title">
@@ -123,6 +53,12 @@
 
         <!-- 结果显示区 -->
         <div id="result-area" class="result-area hidden">
+          <!-- 顶部标签 -->
+          <div class="result-notice">
+            <span class="notice-icon">📢</span>
+            <span class="notice-text">更多详情请关注盐小工校园服务站</span>
+          </div>
+
           <!-- 概率总览 -->
           <div class="overview-panel">
             <div class="overview-item probability-overview">
@@ -204,6 +140,75 @@
       </div>
     </div>
   </section>
+
+  <!-- 主页面介绍 -->
+  <main id="home" class="hero">
+    <div class="container hero-content">
+      <div class="hero-left">
+        <div class="badge">✨ 盐城工学院 · 2026志愿填报助手</div>
+        <h2 class="hero-title">
+          输入你的<span class="highlight">高考分数</span><br />
+          智能匹配心仪专业
+        </h2>
+        <p class="hero-desc">
+          基于历年录取数据，结合今年招生计划，为你科学预测报考成功概率，
+          并按照"冲、稳、保"策略推荐最适合你的专业组合。
+        </p>
+        <div class="hero-features">
+          <div class="feature-item"><span class="feature-icon">🎯</span><span>智能概率预测</span></div>
+          <div class="feature-item"><span class="feature-icon">📊</span><span>冲稳保分类</span></div>
+          <div class="feature-item"><span class="feature-icon">📖</span><span>专业详情查询</span></div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="school-card">
+          <div class="school-banner">
+            <span class="school-badge">🏫 盐城工学院</span>
+          </div>
+          <div class="school-info">
+            <h3>盐城工学院</h3>
+            <p>江苏省属全日制普通本科高校，教育部"卓越工程师教育培养计划"试点高校，坐落于美丽的盐城。</p>
+            <div class="school-tags">
+              <span class="tag">公办本科</span>
+              <span class="tag">卓越计划</span>
+              <span class="tag">工科优势</span>
+              <span class="tag">硕士立项</span>
+            </div>
+            <div class="school-stats">
+              <div class="stat"><span class="stat-num">70+</span><span class="stat-label">本科专业</span></div>
+              <div class="stat"><span class="stat-num">22000+</span><span class="stat-label">在校学生</span></div>
+              <div class="stat"><span class="stat-num">18</span><span class="stat-label">二级学院</span></div>
+            </div>
+            <div class="score-panel">
+              <div class="score-panel-title">📊 2025年各专业组最低投档线</div>
+              <div class="score-grid">
+                <div class="score-item score-physics">
+                  <span class="score-group">物理类 03专业组</span>
+                  <span class="score-value">506分</span>
+                  <span class="score-rank">位次 154,519</span>
+                </div>
+                <div class="score-item score-chem">
+                  <span class="score-group">物理类 02专业组</span>
+                  <span class="score-value">499分</span>
+                  <span class="score-rank">位次 160,498</span>
+                </div>
+                <div class="score-item score-history">
+                  <span class="score-group">历史类 01专业组</span>
+                  <span class="score-value">533分</span>
+                  <span class="score-rank">位次 31,664</span>
+                </div>
+                <div class="score-item score-global">
+                  <span class="score-group">中外合作办学</span>
+                  <span class="score-value">483分</span>
+                  <span class="score-rank">位次 174,640</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <!-- 关于盐工 -->
   <section id="about" class="about-section">
