@@ -487,6 +487,11 @@ body::before {
   color: var(--primary);
 }
 
+.result-notice-bottom {
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
 /* 表单 */
 .query-form {
   margin-bottom: 30px;
